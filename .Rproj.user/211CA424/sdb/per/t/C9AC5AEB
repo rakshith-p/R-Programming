@@ -1,0 +1,18 @@
+{
+    "contents" : "corr <- function(directory, threshold = 0) {\n  files_full <- list.files(directory, full.names = TRUE)\n  dat <- vector(mode = \"numeric\", length = 0)\n  \n  for (i in 1:length(files_full)) {\n    moni_i <- read.csv(files_full[i])\n    csum <- sum((!is.na(moni_i$sulfate)) & (!is.na(moni_i$nitrate)))\n    if (csum > threshold) {\n      tmp <- moni_i[which(!is.na(moni_i$sulfate)), ]\n      submoni_i <- tmp[which(!is.na(tmp$nitrate)), ]\n      dat <- c(dat, cor(submoni_i$sulfate, submoni_i$nitrate))\n    }\n  }\n  \n  dat\n}",
+    "created" : 1447627598880.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3008137409",
+    "id" : "C9AC5AEB",
+    "lastKnownWriteTime" : 1447627610,
+    "path" : "~/RProg/CourseraAssignment1/CourseEraAssignmnet/corr.R",
+    "project_path" : "corr.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,0 +1,18 @@
+{
+    "contents" : "# complete <- function(directory, id = 1:332) {\n#   files_full <- list.files(directory, full.names = TRUE)\n#   dat <- data.frame()\n#   \n#   for (i in id) {\n#     moni_i <- read.csv(files_full[i])\n#     nobs <- sum(complete.cases(moni_i))\n#     tmp <- data.frame(i, nobs)\n#     dat <- rbind(dat, tmp)\n#   }\n#   \n#   colnames(dat) <- c(\"id\", \"nobs\")\n#   dat\n# }\n\ncompete <- function(directory, id =1:332)\n{\n  files_full <- list.files(directory,full.names =TRUE)\n  dat <- data.frame()\n}",
+    "created" : 1447627529251.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4100979925",
+    "id" : "FDB0F24E",
+    "lastKnownWriteTime" : 1447721972,
+    "path" : "~/RProg/CourseraAssignment1/CourseEraAssignmnet/complete.R",
+    "project_path" : "complete.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : true,
+    "type" : "r_source"
+}

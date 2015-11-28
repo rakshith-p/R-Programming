@@ -1,0 +1,18 @@
+{
+    "contents" : "pollutantmean <- function(directory, pollutant, id = 1:332) {\n  files_full <- list.files(directory, full.names = TRUE) \n  \n  dat <- data.frame()\n  \n  for (i in id) {\n    dat <- rbind(dat, read.csv(files_full[i]))\n  }\n  \n  mean(dat[, pollutant], na.rm = TRUE)\n}",
+    "created" : 1447627143172.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2489556978",
+    "id" : "D1375C1E",
+    "lastKnownWriteTime" : 1447627425,
+    "path" : "~/RProg/CourseraAssignment1/CourseEraAssignmnet/pollutantmean.R",
+    "project_path" : "pollutantmean.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : true,
+    "type" : "r_source"
+}
